@@ -10,7 +10,7 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 //app.use(express.static(path.join(__dirname, 'bower_components')));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.static(path.join(__dirname, 'src')));
+//app.use(express.static(path.join(__dirname, 'src')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use('/auth', require('./routes/user-auth'));

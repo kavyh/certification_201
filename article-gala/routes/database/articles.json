@@ -1,186 +1,5 @@
 {
     "1": {
-        "title": "asdfasdf asdfasdf",
-        "category": "News",
-        "description": "<p>asdfasdf <br/></p><p><br/></p><p><br/></p><h2>Try me!</h2><p>textAngular is a super cool WYSIWYG Text Editor directive for AngularJS</p><p>​<img src=\"images/Kanchu referre.png\" width=\"388\" height=\"159\"/></p><p><b>Features:</b></p><ol><li>Automatic Seamless Two-Way-Binding</li><li>Super Easy <b>Theming</b> Options</li><li style=\"color: green;\">Simple Editor Instance Creation</li><li>Safely Parses Html for Custom Toolbar Icons</li><li class=\"text-danger\">Doesn't Use an iFrame</li><li>Works with Firefox, Chrome, and IE9+</li></ol>",
-        "articleId": {
-            "articleId": 10
-        }
-    },
-    "2": {
-        "title": "asdfasdf",
-        "category": "News",
-        "description": "<p>asdfasdf <br/></p>",
-        "articleId": 2
-    },
-    "3": {
-        "title": "asdf",
-        "category": "Technology",
-        "description": "<p>asdfasdf <br/></p>",
-        "articleId": 3
-    },
-    "4": {
-        "title": "asdf",
-        "category": "Technology",
-        "description": "<p>asdfasdf <br/></p>",
-        "articleId": 4,
-        "date": 1476275834623
-    },
-    "5": {
-        "title": "asdf",
-        "category": "Technology",
-        "description": "<p>asdfasdf <br/></p>",
-        "articleId": 5,
-        "date": 1476275966681
-    },
-    "6": {
-        "title": "asdf",
-        "category": "Technology",
-        "description": "<p>asdfasdf <br/></p>",
-        "articleId": 6,
-        "date": 1476275996187
-    },
-    "7": {
-        "title": "asdf",
-        "category": "Technology",
-        "description": "<p>asdfasdf <br/></p>",
-        "articleId": 7,
-        "date": 1476276125921
-    },
-    "8": {
-        "title": "asdf",
-        "category": "Technology",
-        "description": "<p>asdfasdf <br/></p>",
-        "articleId": 8,
-        "date": 1476276182652
-    },
-    "9": {
-        "title": "asdfasdf asdfasdf",
-        "category": "Technology",
-        "description": "<p>asdfasdfsdf asdfasdf a sdfasdf asdf<br/></p>",
-        "author": "%7B%22name%22%3A%22Nick%20H%22%2C%22token%22%3A%22%242a%2410%24OL70L9sD9CPEgMaxLv7WieuQJyWy6jL56Fj.ZNlrFvAFME.m6BR1a%22%7D",
-        "date": 1476276982468
-    },
-    "10": {
-        "title": "asdfasdf asdfasdf",
-        "category": "Technology",
-        "description": "<p>asdfasdfsdf asdfasdf a sdfasdf asdf<br/></p>",
-        "articleId": 10,
-        "author": "%7B%22name%22%3A%22Nick%20H%22%2C%22token%22%3A%22%242a%2410%24OL70L9sD9CPEgMaxLv7WieuQJyWy6jL56Fj.ZNlrFvAFME.m6BR1a%22%7D",
-        "date": 1476279406171
-    },
-    "11": {
-        "title": "asdfasdf asdfasdf",
-        "category": "Technology",
-        "description": "<p>asdfasdfsdf asdfasdf a sdfasdf asdf<br/></p>",
-        "articleId": 11,
-        "author": "%7B%22name%22%3A%22Nick%20H%22%2C%22token%22%3A%22%242a%2410%24OL70L9sD9CPEgMaxLv7WieuQJyWy6jL56Fj.ZNlrFvAFME.m6BR1a%22%7D",
-        "date": 1476279540829
-    },
-    "12": {
-        "title": "asdfasdf asdfasdf",
-        "category": "Technology",
-        "description": "<p>asdfasdfsdf asdfasdf a sdfasdf asdf<br/></p>",
-        "articleId": 12,
-        "date": 1476279851235
-    },
-    "13": {
-        "title": "asdfasdf asdfasdf",
-        "category": "Technology",
-        "description": "<p>asdfasdfsdf asdfasdf a sdfasdf asdf<br/></p>",
-        "articleId": 12,
-        "author": "{\"name\":\"Nick H\",\"token\":\"$2a$10$OL70L9sD9CPEgMaxLv7WieuQJyWy6jL56Fj.ZNlrFvAFME.m6BR1a\"}",
-        "date": 1476279876107
-    },
-    "14": {
-        "title": "asdfasdf asdfasdf",
-        "category": "Technology",
-        "description": "<p>asdfasdfsdf asdfasdf a sdfasdf asdf<br/></p>",
-        "articleId": 14,
-        "author": "{\"name\":\"Nick H\",\"token\":\"$2a$10$OL70L9sD9CPEgMaxLv7WieuQJyWy6jL56Fj.ZNlrFvAFME.m6BR1a\"}",
-        "date": 1476279980844
-    },
-    "15": {
-        "title": "asdfasdf asdfasdf",
-        "category": "Technology",
-        "description": "<p>asdfasdfsdf asdfasdf a sdfasdf asdf<br/></p>",
-        "articleId": 15,
-        "author": "{\"name\":\"Nick H\",\"token\":\"$2a$10$OL70L9sD9CPEgMaxLv7WieuQJyWy6jL56Fj.ZNlrFvAFME.m6BR1a\"}",
-        "date": 1476279997701
-    },
-    "16": {
-        "title": "asdfasdf asdfasdf",
-        "category": "Technology",
-        "description": "<p>asdfasdfsdf asdfasdf a sdfasdf asdf<br/></p>",
-        "articleId": 16,
-        "author": "Nick H",
-        "date": 1476280023865
-    },
-    "17": {
-        "title": "asdfasdf asdfasdf",
-        "category": "Technology",
-        "description": "<p>asdfasdfsdf asdfasdf a sdfasdf asdf<br/></p>",
-        "articleId": 17,
-        "date": 1476280140210
-    },
-    "18": {
-        "title": "asdfasdf asdfasdf",
-        "category": "Technology",
-        "description": "<p>asdfasdfsdf asdfasdf a sdfasdf asdf<br/></p>",
-        "articleId": 17,
-        "author": "Kavya H",
-        "date": 1476280161787
-    },
-    "19": {
-        "title": "asdfasdf asdfasdf",
-        "category": "Technology",
-        "description": "<p>asdfasdfsdf asdfasdf a sdfasdf asdf<br/></p>",
-        "articleId": 19,
-        "author": {
-            "name": "Kavya H",
-            "username": "kavyh",
-            "token": "$2a$10$FTj8VDu3iEIcU6y2xq7kk.VX5.H77N8wjS4CJGTSfJnx8bY87ESUy"
-        },
-        "date": 1476280239405
-    },
-    "20": {
-        "title": "asdfasdf asdfasdf 20",
-        "category": "Technology",
-        "description": "<p>asdfasdfsdf asdfasdf a sdfasdf asdf</p><p><img src=\"images/Kanchu referre.png\" width=\"357\" height=\"147\"/><br/></p>",
-        "articleId": 20,
-        "author": {
-            "name": "Kavya H",
-            "username": "kavyh",
-            "token": "$2a$10$FTj8VDu3iEIcU6y2xq7kk.VX5.H77N8wjS4CJGTSfJnx8bY87ESUy"
-        },
-        "date": 1476362848282
-    },
-    "21": {
-        "title": "asdfasdf asdfasdf",
-        "category": "Technology",
-        "description": "<p>asdfasdfsdf asdfasdf a sdfasdf asdf<br/></p>",
-        "articleId": 20,
-        "author": {
-            "name": "Kavya H",
-            "username": "kavyh"
-        },
-        "date": 1476298847091
-    },
-    "22": {
-        "author": {
-            "name": "Kavya H",
-            "username": "kavyh"
-        },
-        "date": 1476361474999
-    },
-    "23": {
-        "author": {
-            "name": "Kavya H",
-            "username": "kavyh"
-        },
-        "date": 1476361574534
-    },
-    "24": {
         "title": "Looking Ahead: Three Years of Start Bootstrap!",
         "category": "News",
         "description": "<div></div><div>Three years ago today I launched Start Bootstrap, and ever since it’s  been my mission to provide the web design community with quality, open source templates and themes. First off, I’d like to thank all of the visitors, users, and contributors that have passed through in the last few years because without you Start Bootstrap would be nothing like it is today!<br/><p>Along with a shiny new design update to Start Bootstrap, I wanted to share with you some of the improvements and new content that will be coming in the next few months!</p><br/><h3 id=\"design-guides-and-code-tutorials-are-coming\">Design Guides and Code Tutorials are Coming!</h3><br/><p>In the past, support for the content on Start Bootstrap has been limited to code comments, Disqus discussions, email requests, and GitHub issues - until now! I’m proud to announce that Start Bootstrap will begin publishing code tutorials to help educate designers and developers who are newer to Bootstrap or need help working with templates and themes. I’ll also be releasing design guides which will offer techniques and inspiration for those who are looking to create Bootstrap websites with a unique look and feel!</p><br/><p>I’ll be elaborating a bit more on the structure of these new resources in a follow up post soon!</p><br/><h3 id=\"new-themes\">New Themes</h3><br/><p>In addition to the guides and tutorials, there will also be some shiny new themes coming to Start Bootstrap! I’ve been listening to your <br/>suggestions on Twitter and via email, and I’ll be creating versions of some frequently requested templates.</p><br/><p>Alongside these new themes, current themes on Start Bootstrap will be updated as needed, which already started with Gulp and npm support on some of the more popular themes.</p><br/><h3 id=\"preparing-for-bootstrap-4\">Preparing for Bootstrap 4</h3><br/><p>Finally, Start Bootstrap is preparing for the impending release of Bootstrap 4. All templates and themes on Start Bootstrap will be updated<br/> to Bootstrap 4 once the new version is released, and don’t worry the Bootstrap 3 versions will still be available via GitHub!</p><br/><p>I hope you like the new design to the site, and make sure to keep an eye on Start Bootstrap in the coming months for some new themes along with tutorials and guides! The best way to stay informed is to follow Start Bootstrap on Twitter, or to subscribe to our mailing list and I’ll send you updates when new content is available.</p><br/><p>Until next time, happy coding!</p><br/></div><!--EndFragment--><p><br/></p><p><br/></p>",
@@ -213,16 +32,16 @@
             }
         ]
     },
-    "25": {
-        "title": "Testing comments 1",
+    "2": {
+        "title": "Testing comments",
         "category": "News",
-        "description": "<p>asdfasdf testing </p><p>​<img src=\"images/1476442110829-requirement.png\" width=\"388\" height=\"159\"/></p>",
+        "description": "<p>Testing the Commenting order of sorting<br/></p><p>​</p><div><img src=\"images/1476470383173-img.jpg\" class=\"light-box-directive\" width=\"388\" height=\"159\"/></div>",
         "author": {
             "name": "Kavya H",
             "username": "kavyh",
-            "token": "$2a$10$2coC3qtBqAEYGU98nHpft.vanmMTJyrOUb5Z4ozK6NtJb4Ip.KJnq"
+            "token": "$2a$10$DrFrDmUfnu92H1g0a5MqceiVom4YFptP7nCHGjckys9iPsnwYrDUO"
         },
-        "date": 1476442114733,
+        "date": 1476470388617,
         "comments": [
             {
                 "data": "<p>com1<br/></p>",
@@ -256,54 +75,70 @@
             }
         ]
     },
-    "26": {
-        "title": "test 1",
-        "category": "News",
-        "description": "<p>asdf <br/></p>",
+    "3": {
+        "title": "Start Bootstrap Moves to MIT Licensing",
+        "category": "Technology",
+        "description": "<p><br/></p><div><br/><p>All of the free templates and themes on Start Bootstrap are now licensed under the MIT license instead of Apache 2.0.</p><br/><p>The MIT license is simple, and it allows you to do just about anything you want with the templates.</p><br/><p>In a nutshell, with the MIT license you can use any of the templates <br/>or themes on Start Bootstrap for commercial or private use, and you can <br/>distribute and/or modify the templates as you wish.</p><br/><p>Every template on Start Bootstrap has a custom CSS file, and some <br/>have a custom JS file, which has a comment in the first few lines of <br/>code.</p><br/><p>The whole point of Start Bootstrap is to remain open source, and to <br/>keep the templates and themes useable and extendable to a broad range of<br/> users. Switching to the MIT license is simply another step in this <br/>direction.</p><br/></div><!--EndFragment--><p><br/></p><p><br/></p>",
         "author": {
-            "name": "Kavya H",
-            "username": "kavyh"
+            "name": "Nick H",
+            "username": "nick"
         },
-        "date": 1476370045655,
+        "date": 1476466475363,
         "comments": [
             {
-                "data": "<p>asdfaf<br/></p>",
-                "author": "Kavya H",
-                "date": 1476442466170
-            },
-            {
-                "data": "<p>sd fgasdf as f<br/></p>",
-                "author": "Kavya H",
-                "date": 1476442470876
+                "data": "<p><br/><!--StartFragment-->David Miller is the creator of Start Bootstrap and owner of Blackrock Digital. He is a front end web designer and developer working out of sunny Orlando, Florida.<!--EndFragment--><br/><br/><br/></p>",
+                "author": "Nick H",
+                "date": 1476466503526
             }
         ],
-        "articleId": 26
+        "articleId": 3
     },
-    "27": {
-        "title": "test 2",
-        "category": "Technology",
-        "description": "<p>asdf<br/></p>",
+    "4": {
+        "title": "Start Bootstrap Templates Now Have Their Own Repos",
+        "category": "News",
+        "description": "<p><br/></p><!--StartFragment--><div>By popular demand I have finally pulled all of the templates on Start Bootstrap into their own personal GitHub repository! What this means is<br/><p> that you can easily fork a template to start a new project directly in GitHub.</p><br/><p>In the coming weeks I will be setting up some basic Grunt environments for most templates, and I will be changing around a few other behind-the-scenes things, but nothing on the surface will change that much. The .zip download of each template will always be just the core template files, so if you don’t know how to use, or don’t want to use the new development environments you can have a vanilla version of the template available via download.</p><br/><p>You can see all of the available templates here: https://github.com/BlackrockDigital</p><br/><p>My goal with these updates are to make the themes and templates available on Start Bootstrap more developer-friendly. If you have any suggestions, feel free to email me at feedback@startbootstrap.com!</p><br/><p>In the long term, I will be working on setting up some beginner level video tutorials for some information on how to use things like Grunt <br/>and Bower with Start Bootstrap templates, and of course I will be adding more templates to the mix! If you have a type of template design you’d <br/>like to see, drop me an email!<br/></p><br/><p>Thanks everyone, and I’ll see you next time!<br/></p></div>",
+        "author": {
+            "name": "Nick H",
+            "username": "nick"
+        },
+        "date": 1476466664279,
+        "comments": [
+            {
+                "data": "<p>My goal with these updates are to make the themes and templates available on Start Bootstrap more developer-friendly</p>",
+                "author": "Nick H",
+                "date": 1476466691442
+            },
+            {
+                "data": "<p><br/><!--StartFragment-->I’ll see you next time!<!--EndFragment--><br/><br/></p>",
+                "author": "Nick H",
+                "date": 1476466727453
+            }
+        ],
+        "articleId": 4
+    },
+    "5": {
+        "title": "One Year of Start Bootstrap!",
+        "category": "News",
+        "description": "<p>Hello Start Bootstrap users! It’s been a whole year since StartBootstrap has launched, and it’s been a great one thanks to you. Over the course of the year, Start Bootstrap has become one of the most popular Bootstrap related websites on the web!</p><div><br/><p>In the past year, Start Bootstrap has seen 1.3 Million unique users visit the site. These users accounted for 2.2 Million visits and 7.5 Million page views. That being said, it’s been an awesome year overall as far as the statistics are concerned.</p><br/><h3 id=\"start-bootstrap-20\">Start Bootstrap 2.0!</h3><br/><p>With the one year anniversary of Start Bootstrap, I would also like to make everybody aware of the launch of Start Bootstrap 2.0! If you haven’t noticed by now, Start Bootstrap has been completely redesigned! The new design is nice, but more importantly, we’re now hosted on GitHub Pages, and we are using Jekyll to post new content. What this means is that when I have an idea for a new template, I’ll be able to add it to Start Bootstrap much faster, and updating the site will be much more efficient. Overall, I’m hoping that the new update will result in the <br/>more frequent addition of new templates.</p><br/><h3 id=\"bower-packages\">Bower Packages</h3><br/><p>As we move into the future, there are a few things that I will be adding to Start Bootstrap. The first thing that I’ll be working on is creating Bower packages for all of the themes on Start Bootstrap. I am really aiming for Start Bootstrap to be a bit more developer friendly, and while manually installing the downloaded template files is easy enough, Bower will cater to the developers a bit better.</p><br/><p>Over the next few months (as time permits) I will be segmenting all of the templates on Start Bootstrap into their own GitHub repo (finally) and creating Bower packages for each template. For everyone else out there, don’t worry, the .zip files that you download from the site will still be there for manual installation!</p><br/><h3 id=\"wordpress-and-more\">WordPress and More</h3><br/><p>After getting the Bower packages all set, I’ll be looking at creating WordPress and other CMS versions of some of the more popular templates on Start Bootstrap. I have had loads of requests asking for WordPress versions of a few templates, and it’s about time to start delivering on some of those. I have a few contributors who may be helping to convert some of the themes over to various CMS’ and I will be tackling some of them on my own.<br/></p><br/><p>Currently, I am looking at using Roots in order to create the WordPress versions of some of the themes since it’s a Bootstrap based <br/>WordPress framework.</p><br/><h3 id=\"special-thanks\">Special Thanks</h3><br/><p>That about covers all of the updates for now. I’m excited to keep improving Start Bootstrap. Lastly, I wanted to thank all of the people who shared Start Bootstrap with their friends and coworkers throughout the past year. Without you, Start Bootstrap wouldn’t be what it is today! I’ll keep an eye out for everyone on Twitter, and if you haven’t followed Start Bootstrap yet then you can follow the project at @SBootstrap. Also, if you want to follow me (the creator of Start Bootstrap) then you can follow me at @davidmillerskt.</p><br/><p>Until next time, I hope your projects are a success, and Start Bootstrap will be here when you need it!</p><p><br/></p></div>",
+        "author": {
+            "name": "U1 u1",
+            "username": "u1",
+            "token": "$2a$10$Dnwjt84hBhlIRMEHAI9Az.tBR1o00/Pq/lhPhOLA.fiS2Skxi7AYG"
+        },
+        "date": 1476467012893,
+        "comments": [],
+        "articleId": 5
+    },
+    "6": {
+        "title": "New Theme - SB Admin 2",
+        "category": "News",
+        "description": "<p><br/></p><!--StartFragment--><div><p>The original ‘SB Admin’ has gotten a lot of attention over the past few months, but this time it’s better!</p><br/><p>We’ve listed to a lot of suggestions that you’ve had, and we have taken those suggestions and created a new admin template that is 100% free and open-source.</p><br/><p>‘SB Admin 2’ is a new and improved, easily customizable, free Bootstrap based admin template that is great for building web apps.</p><br/><p>###SB Admin 2 - New and Improved<br/>Download Here: http://startbootstrap.com/sb-admin-v2</p><br/><p>There have been a number of improvements over the previous version of SB Admin. Most notably, the menu bar in version 2 is greatly improved. On mobile devices, the side bar collapses into a nice, three-level dropdown that sits under the user interface links that behave as normal (and slightly modified) dropdowns.</p><br/><p>Among other improvements, we’ve updated the morris.js plugin to feature fully responsive morris charts, and Tablesorter was dropped in favor of dataTables, which is customized to work with Bootstrap 3 and Font Awesome icons.</p><br/><p>We also want to give a special thanks to Bootsnipp for providing us with some awesome code snippets that were worked in which include: a timeline, chat widget, login page, circle buttons, outline buttons, and social buttons. You can see more Bootstrap code snippets on their website at http://bootsnipp.com/.</p><br/><p>You can download ‘SB Admin 2’ on our site at http://startbootstrap.com/sb-admin-v2. We hope you enjoy this new <br/>addition to Start Bootstrap! We will be back soon with some more new content!<br/></p><br/></div><p><br/></p>",
         "author": {
             "name": "Kavya H",
             "username": "kavyh"
         },
-        "date": 1476370132775,
-        "comments": [],
-        "articleId": 27
+        "date": 1476467186439,
+        "comments": []
     },
-    "articleIdsequence": 28,
-    "undefined": {
-        "comments": [
-            {
-                "data": "<p>test<br/></p>",
-                "author": "Kavya H",
-                "date": 1476370388597
-            },
-            {
-                "data": "<p>test<br/></p>",
-                "author": "Kavya H",
-                "date": 1476370614006
-            }
-        ]
-    }
+    "articleIdsequence": 7
 }
