@@ -1,0 +1,80 @@
+<div ng-init="vm.init()">
+    <br><br>
+
+    <ol class="breadcrumb breadcrumb-post">
+        <li>
+            <a href="/">Home</a>
+        </li>
+        <li class="active">Articles</li>
+    </ol>
+    {{vm.filter.selectedAutors}}<hr>
+{{vm.filter.authors}}<hr>
+
+    <div class="form-inline filter-articles breadcrumb">
+        <input type="text" class="form-control" ng-model="vm.searchText" placeholder="Search" style="width:20%"/>
+        <!-- 	Authors Filter -->
+        <div class="btn-group" uib-dropdown is-open="isAuthorOpen"
+             ng-init="isAuthorOpen = false;">
+            <button read-only class="btn form-control" uib-dropdown-toggle
+                    ng-disabled="disabled" tooltip="Filter for specific Authors">
+                Filter Authors <span class="caret"></span>
+            </button>
+            <ul uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                <li role="menuitem"><a
+                        ng-class="{'selected': vm.filter.selectedAutors.length == vm.filter.authors.length}"
+                        ng-click="vm.filter.selectedAutors = vm.filter.authors.concat([])">Select All</a></li>
+                <li role="menuitem"><a ng-click="vm.filter.selectedAutors = []">Clear
+                        All</a></li>
+                <li class="divider"></li>
+                <li role="menuitem" ng-repeat="mgr in vm.filter.authors"><a
+                        ng-class="{'selected': vm.filter.selectedAutors.indexOf(mgr) != -1}"
+                        ng-bind="mgr"
+                        ng-click="vm.filter.selectedAutors.indexOf(mgr) == -1 ? vm.filter.selectedAutors.push(mgr) : vm.filter.selectedAutors.splice(vm.filter.selectedAutors.indexOf(mgr), 1)">
+                    </a></li>
+            </ul>
+        </div>
+
+        <!-- Filter Category -->
+        <div class="btn-group" uib-dropdown is-open="isopen"
+             ng-init="isopen = false;">
+            <button read-only class="btn form-control" uib-dropdown-toggle
+                    ng-disabled="disabled" tooltip="Filter for specific categories">
+                Filter Categories <span class="caret"></span>
+            </button>
+            <ul uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                <li role="menuitem"><a
+                        ng-class="{'selected': vm.filter.selectedCategories.length == vm.filter.categories.length}"
+                        ng-click="vm.filter.selectedCategories = vm.filter.categories.concat([])">Select All</a></li>
+                <li role="menuitem"><a ng-click="vm.filter.selectedCategories = []">Clear
+                        All</a></li>
+                <li class="divider"></li>
+                <li role="menuitem" ng-repeat="proj in vm.filter.categories"><a
+                        ng-class="{'selected': vm.filter.selectedCategories.indexOf(proj) != -1}"
+                        ng-bind="proj"
+                        ng-click="vm.filter.selectedCategories.indexOf(proj) == -1 ? vm.filter.selectedCategories.push(proj) : vm.filter.selectedCategories.splice(vm.filter.selectedCategories.indexOf(proj), 1)">
+                    </a></li>
+
+            </ul>
+            <span class="btn btn-info" ng-repeat="proj in vm.filter.selectedCategories">{{proj}}
+                <span class="fa fa-remove"
+                      ng-click="vm.filter.selectedCategories.splice(vm.filter.selectedCategories.indexOf(proj), 1)"></span>
+            </span>
+        </div>
+        
+   
+    </div>
+    <br>
+     <a href="articles/new" class="btn btn-sm btn-info pull-right">Got something to Share!! Add an Article!! </a>
+
+    <div ng-repeat="article in vm.filtered| limitTo: vm.entryLimit:(vm.currentPage-1)*vm.entryLimit |filter:vm.searchText" class="comments-content">
+        <h3 class="atricles-font"><a href="{{'articles/' + article.id}}" ng-bind="article.title"></a></h3>
+        <span class="author"  ng-bind="'by ' + article.author.name"></span> <br>
+        <span class="text-muted category"> <i class="fa fa-tag" aria-hidden="true"></i>{{article.category}}
+            <i class="fa fa-clock-o" aria-hidden="true"></i>{{article.date| date:'dd MMM yyyy'}}</span>
+    </div>
+
+    <br>
+    <ul uib-pagination total-items="vm.filtered.length" ng-model="vm.currentPage" max-size="3" items-per-page="vm.entryLimit" class="pagination " boundary-links="true" 
+        force-ellipses="true" ></ul>
+
+</div>

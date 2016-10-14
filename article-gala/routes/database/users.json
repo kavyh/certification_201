@@ -1,0 +1,22 @@
+{
+    "kavyh": {
+        "firstName": "Kavya",
+        "lastName": "H",
+        "hash": "$2a$10$q6IT2Eu4101U8kbUZfv/queiPh31pjaiG5cFYeTyREcgdsVLKgWdi"
+    },
+    "jack": {
+        "firstName": "Jack",
+        "lastName": "W",
+        "hash": "$2a$10$0vWhOY7U8ozA6hnmb2XA2Ojgc.KtTQHXrr19idHApE4ysSFCFZhoW"
+    },
+    "u1": {
+        "firstName": "U1",
+        "lastName": "u1",
+        "hash": "$2a$10$lrDynRrGJE8CkByDdGAs5.SMNGMAujxeAO6PmTXRtOXBFa/rlT4k."
+    },
+    "nick": {
+        "firstName": "Nick",
+        "lastName": "H",
+        "hash": "$2a$10$TVrubHJW.T7Vb17zPoBhyuqM301O8gM5t5kTZikpjmx2SOtIIXf6."
+    }
+}

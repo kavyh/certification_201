@@ -1,0 +1,28 @@
+{
+  "name": "article-gala",
+  "version": "1.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node server.js"
+  },
+  "devDependencies": {
+    "grunt": "latest",
+    "grunt-contrib-jshint": "latest",
+    "jshint-stylish": "latest",
+    "grunt-contrib-uglify": "latest",
+    "grunt-contrib-less": "latest",
+    "grunt-contrib-cssmin": "latest",
+    "grunt-contrib-watch": "latest"
+  },
+  "dependencies": {
+    "ejs": "*",
+    "express": "*",
+    "body-parser": "*",
+    "async": "*",
+    "q":"*",
+    "bcryptjs":"*",
+    "node-json-db":"*",
+    "multer":"*"
+    
+  }
+}

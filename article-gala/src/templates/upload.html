@@ -1,0 +1,21 @@
+<div class="modal-header">
+    <div class="col-md-10">
+        <h4 class="modal-title"><span class="glyphicon glyphicon-picture"></span> Upload Image</h4>
+    </div>
+    <div class="col-md-2 right">
+        <a class="close" href data-ng-click="$dismiss()"><span class="glyphicon glyphicon-remove"></span></a>
+    </div>
+</div>
+
+<form name="upload_form">
+    <input type="file" ngf-select ng-model="vm.file" name="file" ngf-pattern="'image/*'" accept="image/*" class="btn btn-default"/><br>
+    <div ng-show="vm.file"> Image thumbnail: <img style="width:200px;" ngf-thumbnail="vm.file || '/thumb.jpg'"/></div>
+    <i ng-show="upload_form.file.$error.required">*required</i><br>
+    <i ng-show="!upload_form.file.$valid">Invalid File</i>
+    
+    
+    <div class="modal-footer center clearfix">
+        <button data-ng-click="$dismiss()" type="button" class="btn btn-default pull-left">Cancel</button>
+        <button type="button" ng-click="vm.submit()" class="btn btn-primary pull-right">Upload Image</button>
+    </div>
+</form>

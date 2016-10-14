@@ -1,0 +1,42 @@
+<div class="form-container">
+    <h2>Register</h2>
+    <form name="form" ng-submit="form.$valid && vm.register()">
+        <div ng-if="vm.error" class="alert alert-danger">{{vm.error}}</div>
+        <div class="form-group">
+            <label for="firstName">First name</label>
+            <input type="text" name="firstName" ng-model="vm.firstName" class="form-control" required />
+            <div ng-messages="form.$submitted && form.firstName.$error" class="help-block">
+                <div ng-message="required">First Name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="lastName">Last name</label>
+            <input type="text" name="lastName" ng-model="vm.lastName" class="form-control" required />
+            <div ng-messages="form.$submitted && form.lastName.$error" class="help-block">
+                <div ng-message="required">Last Name is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="username">Username</label>
+            <input type="text" name="username" ng-model="vm.username" class="form-control" required />
+            <div ng-messages="form.$submitted && form.username.$error" class="help-block">
+                <div ng-message="required">Username is required</div>
+            </div>
+        </div>
+        <div class="form-group has-feedback">
+            <label for="password">Password</label>
+            <input type="{{vm.showPwd?'text':'password'}}" name="password" ng-model="vm.password" class="form-control" required />
+            <span ng-init="vm.showPwd=false" ng-show="vm.password"
+                  ng-click="vm.showPwd=!vm.showPwd" ng-class="vm.showPwd?'glyphicon-eye-close':'glyphicon-eye-open'"
+              class="glyphicon form-control-feedback" 
+              style="cursor: pointer; pointer-events: all;"></span>
+            <div ng-messages="form.$submitted && form.password.$error" class="help-block">
+                <div ng-message="required">password is required</div>
+            </div>
+        </div>
+        <div class="form-group">
+            <button type="submit" class="btn btn-primary">Register</button>
+            <a href="/login" class="btn btn-link">Cancel</a>
+        </div>
+    </form>
+</div>

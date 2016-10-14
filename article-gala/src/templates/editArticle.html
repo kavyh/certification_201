@@ -1,0 +1,121 @@
+
+<ol class="breadcrumb breadcrumb-post">
+    <li>
+        <a href="/">Home</a>
+    </li>
+    <li><a href="/articles">Articles</a></li>
+    <li class="active" ng-bind="vm.data.title || 'New'"></li>
+</ol>
+
+<br>
+
+<!--Edit Mode-->
+<div ng-if="vm.mode">
+    <form name="form" ng-submit="form.$valid && vm.save();" novalidate>
+        <table class="padding-td">
+            <tr>
+                <td>Title</td>
+                <td style="width:80%"> 
+                    <input required focus-me="true" type="text" style="width:80%" name="title" ng-model="vm.data.title" 
+                           class="form-control" ng-maxlength="500">
+                    <div ng-messages="form.$submitted && form.title.$error" style="color:maroon" role="alert">
+                        <div ng-message="required">Title is required</div>
+                        <div ng-message="maxlength">Title is too long</div>
+                    </div>
+                </td>
+                <td class="pull-right">
+                    <span class="btn btn-sm btn-info" ng-click="vm.reset()">Reset</span>
+                    <span class="btn btn-sm btn-warning" ng-click="vm.mode = !vm.mode;">Cancel</span>
+                </td>
+            </tr>
+            <tr>   
+                <td>Category</td>
+                <td> <select name="category" ng-model="vm.data.category" required class="form-control" style="width:15%"
+                             ng-options="obj for obj in ['News', 'Technology', 'Entertainment', 'Others']">
+                    </select>
+                    <div role="alert" ng-messages="form.$submitted && form.category.$error">
+                        <div ng-message="required">Category is required</div>
+                    </div>
+                </td>
+                <td class="pull-right">
+                    <button type="submit"   class="btn btn-sm btn-primary">Save</button>
+                    <span ng-hide='vm.isNew' class="btn btn-sm btn-danger" ng-click="vm.delete()">Delete</span>
+                </td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td> <text-angular name="description" required ng-model="vm.data.description"></text-angular>
+            <div role="alert" ng-messages="form.$submitted && form.description.$error" class="help-block">
+                <div ng-message="required">Description is required</div>
+            </div>
+            </td>
+            </tr>
+        </table> 
+    </form>
+
+    <hr/>
+    <h3>Preview : </h3>
+    <hr/>
+</div>
+
+<!--Read Mode-->
+<div ng-if="!vm.mode">
+    <div class="pull-right" ng-show="currentUser.username === vm.data.author.username">
+        <button  class="btn btn-sm btn-primary" ng-click="vm.mode = !vm.mode;">Edit</button>
+        <button ng-hide='vm.isNew' class="btn btn-sm btn-danger" ng-click="vm.delete()">Delete</button>
+    </div>
+</div>
+
+<!--Article Content Display-->
+<div class="aticle-content">  
+    <h1 ng-bind="vm.data.title" class="atricles-font"></h1> <br>
+    <span class="author" style="font-weight:bold" ng-bind="'by ' + (vm.data.author.name || currentUser.name)"></span><br>
+    <span class="text-muted"> 
+        <i class="fa fa-tag" aria-hidden="true"></i>{{vm.data.category}}
+        <i class="fa fa-clock-o" aria-hidden="true"></i>{{vm.data.date| date:'dd MMM yyyy'}}
+    </span> 
+    <br> <hr><br>
+    <div compile="vm.data.description" class="article-post"></div>
+</div>
+<hr>
+
+<!--Comments-->
+
+<div ng-if="!vm.mode" class='editor-comment'>
+    <form name="form" ng-submit="form.$valid && vm.saveComment()" novalidate>
+        <table class="article-comment">
+            <tr>
+                <td class="user"> Comment</td>
+                <td>
+                    <div name='comment' required ng-model="vm.comment.data" text-angular ta-toolbar="[['h1','h2','h3','p','pre','html'],['bold','italics','underline','ul','ol'],['justifyLeft','justifyCenter','justifyRight','justifyFull','indent','outdent']]"></div>
+                    <div role="alert" ng-messages="form.$submitted && form.comment.$error" class="help-block">
+                        <div ng-message="required">Nothing to Save</div>
+                    </div>
+
+                    <button type="submit" class="btn btn-default pull-right">Save</button>
+                    <button class="btn btn-default pull-right" ng-click="vm.comment.data = ''">Clear</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+    <div  class="alert alert-info input-group" role="alert" ng-if="vm.data.comments.length !== 0" ng-repeat="comment in vm.data.comments| orderBy:'$index':true">  
+        <span class="input-group-addon " id="basic-addon1"><i class="fa fa-user fa-2x" aria-hidden="true"></i> </span>
+        <div aria-describedby="basic-addon1" class="comments-content">  
+            <h4 ng-bind-html="comment.data"></h4>  
+            <span class="text-muted"> 
+                <h6>   <i class="fa fa-tag" aria-hidden="true"></i>{{comment.author}}
+                    <i class="fa fa-clock-o" aria-hidden="true"></i>{{comment.date| date:'dd MMM yyyy'}}</h6>
+            </span>
+        </div>
+    </div>
+    <div ng-if="vm.data.comments.length === 0">  
+
+    </div>
+</div>
+
+<style>
+    .alert{
+        padding:4px;
+    }
+</style>    

@@ -1,0 +1,24 @@
+<nav ng-show="currentUser" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">      
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <span class="sr-only">Toggle navigation</span> 
+                <span class="icon-bar"></span> 
+                <span class="icon-bar"></span> 
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand navbar-right" href="/"><i class="fa fa-home fa-4"></i>Article Gala</a>
+        </div>
+
+        <div style="height: 1px;" aria-expanded="false" id="navbar" class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="articles">Articles</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right form-inline" role="form">
+                <li class=""><label class="navbar-text "> <i class="fa fa-user fa-4"></i>Hello {{currentUser.name}}
+                    </label></li>
+                <li><a href="login"><span class="fa fa-sign-out fa-4"></span> Logout</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>

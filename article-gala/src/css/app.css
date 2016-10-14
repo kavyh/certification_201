@@ -1,0 +1,105 @@
+body{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.container{
+    width: 98%;
+    height: 95%;
+}
+.roundedDiv {
+    border-left: 8px solid #009688;
+    line-height: 12px;
+    background: white;
+    border-radius: 5px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    padding: 4px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: block;
+    margin:inherit;
+    margin-top: 30px;
+}
+
+/*needed for fixed top navbar*/
+body { 
+    padding-top: 50px; 
+}
+
+html {
+    height: 100%;
+}
+.atricles-font{
+    margin-bottom: 0;margin-top: 30px;font-weight: 700;
+}
+/*body background*/
+body{
+    background: -moz-linear-gradient(top, #f6f1d3 40%,#648880  125%,#293f50 );
+    background: -webkit-linear-gradient(top,  #f6f1d3 40%,#648880  125%,#293f50 );
+    background: linear-gradient(to bottom, #f6f1d3 40%,#648880  125%,#293f50 );
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#648880', endColorstr='#293f50',GradientType=0 );
+
+    height: 92%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.padding-td td{
+    padding:4px;
+}
+
+.aticle-content{
+    margin-left:80px;
+    width: 80%;
+}
+.article-comment{
+    margin-left:100px;
+    width: 75%;
+}
+div.editor-comment div div.ta-text.ta-editor {
+    font-size: 12px;
+    height: 100px;
+    min-height: 100px;
+}
+.author{
+line-height: 1.42857;
+}
+
+.category {
+    font-size: 11px;
+    margin-right: 2px;
+}
+.breadcrumb{
+     background-color: #f5f5f5;
+    border-radius: 4px;
+    list-style: outside none none;
+    margin-bottom: 20px;
+    padding: 8px 15px;
+    border-bottom: 3px solid #eeeeee;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    font-family: "Libre Franklin",Helvetica,Arial,sans-serif;
+}
+
+.article-post p,.article-post {
+    font-size: 1.75rem;
+    line-height: 2.75rem;
+    margin-bottom: 20px;
+}
+.comments-content{
+    padding-left: 14px;
+}
+
+.comments-content h3 a{
+    color: #b84d45
+}
+
+.selected:after {
+	content: "\2713";
+	color: red;
+	align-content: flex-end;
+	font-weight: bolder;
+}
+.filter-articles{
+    border: 1px solid blue;
+    background: #1affeeaa;
+}
