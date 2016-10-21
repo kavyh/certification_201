@@ -1,0 +1,63 @@
+<!DOCTYPE html> 
+<html ng-app="notesApp"> 
+    <head>    
+        <title>To-Do</title>    
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <style>
+            .dont-true{
+                text-decoration: line-through;
+                color:grey;
+                font-style: italic;
+            }
+        </style>
+    </head>
+
+    <body ng-controller='MainCtrl as vm'>
+
+        <h2>You've got <span class="emphasis">{{vm.getTotalTodos()}}</span> things to do</h2>
+        <ul>
+            <li ng-repeat="todo in vm.todos">
+                <input type="checkbox" ng-model="todo.done"/>
+                <span ng-class="done-{{todo.done}}">{{todo.text}}</span>
+            </li>
+        </ul>
+        <form name="myForm" ng-submit="vm.addTodo()">
+            <input class="add-input" placeholder="I need to..." type="text" ng-model="vm.formTodoText" required ng-model-instant />
+            <button class="add-btn" >Add</button>
+        </form>
+
+        <button class="clear-btn" ng-click="clearCompleted()">Clear completed</button>
+
+        <script type="text/javascript">
+                    angular.module('notesApp', [])
+                            .controller('MainCtrl', function ($filter) {
+                                var vm = this;
+
+                                vm.todos = [
+                                    {text: 'Learn AngularJS', done: true},
+                                    {text: 'Build an app', done: true},
+                                    {text: 'Test an app', done: false}
+                                ];
+
+                                vm.getTotalTodos = function () {
+                                    return vm.todos.length;
+                                };
+
+
+                                vm.addTodo = function () {
+                                    vm.todos.push({text: vm.formTodoText, done: false});
+                                    vm.formTodoText = '';
+                                };
+
+                                vm.clearCompleted = function () {
+                                    vm.todos = $filter('filter')(vm.todos, function (todo) {
+                                        return !todo.done;
+                                    });
+                                };
+
+                            });
+        </script>
+        
+    </body>
+</html>

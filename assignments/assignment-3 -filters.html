@@ -1,0 +1,108 @@
+<!DOCTYPE html> 
+<html ng-app="app"> 
+    <head>    
+        <title>Filters</title>    
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+        <style>
+            pre{
+                background-color:activecaption;
+                width: 50%; 
+                margin: 15px;
+            }
+        </style>
+    </head>
+
+    <body ng-controller='MainCtrl as vm'>
+
+        <h2>Filters</h2>
+        Filter by property id  <pre> {{vm.data| filterproperty:'id' | json }}</pre> <br>
+        Filter by property Name <pre>  {{vm.data| filterproperty:'name' | json}} </pre><br>
+        Filter Objects with type  
+        <select name="singleSelect" ng-model="vm.type" ng-init="vm.type = 'number'">
+            <option value='string'>String</option>
+            <option value='number'>Number</option>
+            <option value='array'>Array</option>
+        </select><br>
+        <pre>  {{vm.data| filtertype:vm.type | json}}</pre><br>
+
+        Get given Object key length : {{vm.data.properties| keylength }}<br>
+        Get given Object key length with 'required' key : {{vm.data.properties| keylength:'required' }}<br>
+
+        Filter by specific object
+        <pre>  <ul>
+            <li ng-repeat="(key,value) in vm.data.properties |with :'required':true">
+                {{value |json}}
+            </li>
+            
+        </ul>
+</pre> 
+        <script type="text/javascript">
+                    var app = angular.module('app', []);
+                    app.controller('MainCtrl', function () {
+                        var vm = this;
+                        vm.data = {"name": "Product", "properties": {"id": {"type": "number", "description": "Product identifier", "required": true}, "name": {"description": "Name of the product", "type": "string", "required": true}, "price": {"type": "number", "minimum": 0, "required": true}, "tags": {"type": "array", "items": {"type": "string"}}}};
+                    });
+                    app.filter('filterproperty', function () {
+                        return function (input, id) {
+                            var output = {};
+                            if (id && angular.isObject(input)) {
+                                // if any specific id given
+                                angular.forEach(input.properties, function (value, key) {
+                                    if (key === id) {
+                                        output[key] = value;
+                                    }
+                                });
+                            }
+
+                            return output;
+                        };
+                    });
+                    app.filter('filtertype', function () {
+                        return function (input, id) {
+                            var output = {};
+                            if (id && angular.isObject(input)) {
+                                // if any specific id given
+                                angular.forEach(input.properties, function (value, key) {
+                                    if (value.type === id) {
+                                        output[key] = value;
+                                    }
+                                });
+                            }
+
+                            return output;
+                        };
+                    });
+                    app.filter('keylength', function () {
+                                return function (input, id) {
+                                    var length = 0;
+                                    if (id) {
+                                        // if any specific id given
+                                        angular.forEach(input, function (value, key) {
+                                            if (value[id]) {
+                                                length++;
+                                            }
+                                        });
+                                    } else {
+                                        angular.forEach(input, function (value, key) {
+                                            length++;
+                                        });
+                                    }
+
+                                    return length;
+                                }
+                            });
+                            app.filter('with', function() {
+  return function(items, field,fieldValue) {
+        var result = {};
+        angular.forEach(items, function(value, key) {
+            if (value[field]===fieldValue) {
+                result[key] = value;
+            }
+        });
+        return result;
+    };
+});
+        </script>
+
+    </body>
+</html>

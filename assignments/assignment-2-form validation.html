@@ -1,0 +1,180 @@
+<!DOCTYPE html> 
+<html ng-app="app"> 
+    <head>    
+        <title>Login Registration form</title>    
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+
+        <script src="http://angular-ui.github.io/bootstrap/ui-bootstrap-tpls-2.2.0.js"></script>
+        <style>
+            .required:after {
+                float:right;
+                content: " *";
+                color: red;
+            }
+            h2{text-align: center}
+        </style>
+
+    </head>
+
+    <body ng-controller='MainCtrl as vm'>
+        <h2 ng-show="vm.isLoginForm">Login</h2>
+        <h2 ng-hide="vm.isLoginForm">Register</h2>
+        <div class="container">
+            <div class="row">  
+                <div class="col-sm-6">
+                    <!-- FORM ============ -->
+                    <form name="vm.userForm" novalidate>
+                        <!-- NAME -->
+                        <div ng-if="!vm.isLoginForm" class="form-group" ng-class="{ 'has-error' : vm.userForm.name.$invalid && !vm.userForm.name.$pristine }">
+                            <label class="required">Name</label>
+                            <input type="text" name="name" class="form-control" ng-model="vm.user.name" required>
+                            <p ng-show="vm.userForm.name.$invalid && !vm.userForm.name.$pristine" class="help-block">Name is required.</p>
+                        </div>
+                        <!-- USERNAME -->
+                        <div class="form-group" ng-class="{ 'has-error' : vm.userForm.username.$invalid && !vm.userForm.username.$pristine }">
+                            <label class="required">Username</label>
+                            <input type="text" name="username" class="form-control" ng-model="vm.user.username" required ng-minlength="3" ng-maxlength="8">
+
+                            <p ng-show="vm.users|username:vm.user.username" class="help-block">UserName is already taken.</p>
+                            <p ng-show="vm.userForm.username.$invalid && !vm.userForm.username.$pristine" class="help-block">UserName is required.</p>
+                            <p ng-show="vm.userForm.username.$error.minlength" class="help-block">Username is too short.</p>
+                            <p ng-show="vm.userForm.username.$error.maxlength" class="help-block">Username is too long.</p>
+                        </div>
+                        <!-- PASSWORD -->
+                        <div class="form-group has-feedback" ng-class="{ 'has-error' : vm.userForm.password.$invalid && !vm.userForm.password.$pristine }">
+                            <label class="required">Password</label>
+                            <input type="{{vm.showPwd?'text':'password'}}" name="password" class="form-control" ng-model="vm.user.password" required ng-minlength="3" ng-maxlength="8">
+                            <span ng-init="vm.showPwd = false" ng-show="vm.user.password"
+                                  ng-click="vm.showPwd = !vm.showPwd" ng-class="vm.showPwd ? 'glyphicon-eye-close' : 'glyphicon-eye-open'"
+                                  class="glyphicon form-control-feedback" 
+                                  style="cursor: pointer; pointer-events: all;"></span>
+                            <p ng-show="vm.userForm.password.$invalid && !vm.userForm.password.$pristine" class="help-block">Password is required.</p>
+                            <p ng-show="vm.userForm.password.$error.minlength" class="help-block">Password is too short.</p>
+                            <p ng-show="vm.userForm.password.$error.maxlength" class="help-block">Password is too long.</p>
+                        </div>
+                        <!-- EMAIL -->
+                        <div ng-if="!vm.isLoginForm" class="form-group" ng-class="{ 'has-error' : vm.userForm.email.$invalid && !vm.userForm.email.$pristine }">
+                            <label>Email</label>
+                            <input type="email" name="email" class="form-control" ng-model="vm.user.email">
+                            <p ng-show="vm.userForm.email.$invalid && !vm.userForm.email.$pristine" class="help-block">Enter a valid email.</p>
+                        </div>
+                        <!-- PHONE NUMBER -->
+                        <div ng-if="!vm.isLoginForm" class="form-group" ng-class="{ 'has-error' : vm.userForm.phNum.$invalid && !vm.userForm.phNum.$pristine }">
+                            <label ng-class="{'required': vm.user.email?false:true}">Phone Number </label>
+                            <input type="text" name="phNum" class="form-control" ng-model="vm.user.phNum" ng-required="vm.user.email?false:true" ng-minlength="10" ng-maxlength="11">
+                            <p ng-show="vm.userForm.phNum.$error.minlength || vm.userForm.phNum.$error.maxlength" class="help-block">Phone Number should be of 10 digits.</p>
+                        </div>
+                        <button ng-if="vm.isLoginForm" class="btn btn-primary" ng-disabled="vm.userForm.$invalid" ng-click="vm.login()">Login</button>
+                        <button ng-if="vm.isLoginForm" class="btn btn-primary" ng-click="vm.isLoginForm = false">Register</button>
+                        <button ng-if="!vm.isLoginForm" class="btn btn-primary" ng-click="vm.submitForm();" ng-disabled="vm.userForm.$invalid || (vm.users | username: vm.user.username)">Submit</button>
+                        <button ng-if="!vm.isLoginForm" class="btn btn-primary" ng-click="vm.isLoginForm = true">Cancel</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <script type="text/javascript">
+var app = angular.module('app', ['ui.bootstrap']);
+app.filter('username', function () {
+    return function (input, id) {
+        var isAvailable = false;
+        if (id && Array.isArray(input)) {
+            // if any specific id given
+            input.forEach(function (value) {
+                if (value.username === id) {
+                    isAvailable = true;
+                }
+            });
+        }
+
+        return isAvailable;
+    };
+});
+app.controller('MainCtrl', function ($uibModal, $window) {
+    var vm = this;
+    vm.users = [];
+    vm.isLoginForm = true;
+
+    vm.login = function () {
+        alert('You have clicked login');
+    };
+
+    vm.submitForm = function () {
+        var modalInstance = $uibModal.open({
+            component: 'modalComponent',
+            resolve: {
+                user: function () {
+                    return vm.user;
+                }
+            }
+        });
+
+        modalInstance.result.then(function () {
+            vm.users.push(vm.user);
+            vm.userForm.$setUntouched();
+            vm.userForm.$setPristine();
+            vm.user = {};
+            if (!$window.confirm('User saved successfully, Do you want to add another one?')) {
+                vm.isLoginForm = true;
+            }
+
+        });
+    };
+
+});
+
+app.component('modalComponent', {
+    templateUrl: 'myModalContent.html',
+    bindings: {
+        resolve: '<',
+        close: '&',
+        dismiss: '&'
+    },
+    controllerAs: 'vm',
+    controller: function () {
+        var vm = this;
+
+        vm.$onInit = function () {
+            vm.user = vm.resolve.user;
+        };
+
+        vm.ok = function () {
+            vm.close({$value: true});
+        };
+
+        vm.cancel = function () {
+            vm.dismiss();
+        };
+    }
+});
+        </script>
+    <script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3 class="modal-title" id="modal-title">Confirm!</h3>
+    </div>
+    <div class="modal-body" id="modal-body">
+        You have selected: 
+        <table>
+            <tr>
+                <td>Name</td><td ng-bind="vm.user.name"></td>
+            </tr>
+            <tr>
+                <td>User Name</td><td ng-bind="vm.user.username"></td>
+            </tr>
+            <tr>
+                <td>Email</td><td ng-bind="vm.user.email"></td>
+            </tr>
+            <tr>
+                <td>Phone Number</td><td ng-bind="vm.user.phNum"></td>
+            </tr>
+        </table>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="vm.ok()">Save</button>
+        <button class="btn btn-warning" type="button" ng-click="vm.cancel()">Cancel</button>
+    </div>
+</script>
+
+</body>
+</html>
